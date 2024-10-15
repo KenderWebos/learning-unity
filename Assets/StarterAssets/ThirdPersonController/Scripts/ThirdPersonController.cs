@@ -159,6 +159,8 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+
+            // Aim();
         }
 
         private void LateUpdate()
@@ -210,6 +212,18 @@ namespace StarterAssets
             CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
         }
+
+        // private void Aim()
+        // {
+        //     if (_input.Aim) // Asegúrate de que Aim sea un booleano que verifique si se está presionando el clic derecho
+        //     {
+        //         // Aquí puedes implementar la lógica para cuando el jugador está apuntando
+        //         Debug.Log("Apuntando");
+                
+        //         // Ejemplo: podrías mostrar un cursor o cambiar la posición del personaje
+        //     }
+        // }
+
 
         private void Move()
         {
